@@ -1,0 +1,26 @@
+.sty{
+    color:green;
+    background-color: black;
+    text-align: center;
+}
+.city{
+    text-align: right;
+    padding-top :10px;
+    padding-bottom: 10px;
+}
+.home{
+    color:rgb(0, 128, 122);
+    background-color: black;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+.redirection{
+    color:black;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+.regis_table{
+    border-spacing: 5px;
+}

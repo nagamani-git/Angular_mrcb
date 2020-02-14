@@ -1,0 +1,18 @@
+[
+    {
+        "userName": "nagamani",
+        "passWord": "admin",
+        "confirmPassword": "admin",
+        "Mobile_Number": 8985393040,
+        "mail_id": "nagamani.battula@gmail.com",
+        "Address": "mig-90, kukatpally,hyderabad"
+    },
+    {
+        "userName": "mani",
+        "passWord": "nadmi",
+        "confirmPassword": "admin",
+        "Mobile_Number": 8985393040,
+        "mail_id": "battula@gmail.com",
+        "Address": "mig-90, kukatpally,hyderabad"
+    }
+]

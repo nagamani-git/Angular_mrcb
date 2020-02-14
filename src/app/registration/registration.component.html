@@ -1,0 +1,49 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Registration Page</h3>
+    </div>
+    <div class="panel-body">
+        <form [formGroup]="registrationForm" (ngSubmit)="submitRegistrationForm(registrationForm.value)">
+            <div class="form-group">
+                <label>*UserName</label>
+                <input type="text" class="form-control" formControlName="username">
+                <small *ngIf="contorls.username.hasError('required')">UserName is required</small>
+                <small *ngIf="contorls.username.hasError('pattern')">only alphabets</small>
+            </div>
+            <div class="form-group">
+                <label>*PassWord</label>
+                <input type="password" class="form-control" formControlName="password">
+                <small *ngIf="contorls.password.hasError('required')">Password is required</small>
+                <small *ngIf="contorls.password.hasError('minlength')">min length is 6charcters</small>
+            </div>
+            <div class="form-group">
+                <label>*ConfirmPassword</label>
+                <input type="password" class="form-control" formControlName="confirmpassword">
+                <small *ngIf="contorls.confirmpassword.hasError('required')">Confirmassword is required</small>
+                <small *ngIf="contorls.confirmpassword.hasError('minlength')">min length is 6charcters</small>
+            </div>
+            <div class="form-group">
+                <label>*MobileNumber</label>
+                <input type="number" class="form-control" formControlName="mobileNumber">
+                <small *ngIf="contorls.mobileNumber.hasError('required')">Mobile number is required</small>
+                <small *ngIf="contorls.mobileNumber.hasError('pattern')">only numerics</small>
+            </div>
+            <div class="form-group">
+                <label>*EmailId</label>
+                <input type="mail" class="form-control" formControlName="email">
+                <small *ngIf="contorls.email.hasError('required')">Email id is required</small>
+                <small *ngIf="contorls.email.hasError('email')">format should be email</small>
+            </div>
+            <div class="form-group">
+                <label>*Address</label>
+                <input type="textarea" rows="5" cols="50" class="form-control" formControlName="address">
+                <small *ngIf="contorls.address.hasError('required')">Address is required</small>
+            </div>
+            <div>
+                <button  class = "btn btn-primary" type="submit" value="register" [disabled]=!registrationForm.valid>Register</button>
+                <button  class = "btn btn-primary" type="reset"value ="reset">Reset</button>
+            </div>
+            <p>form value: {{registrationForm.value | json}}</p>
+            <p>form status: {{registrationForm.status | json}}</p>
+        </form>
+    </div>
